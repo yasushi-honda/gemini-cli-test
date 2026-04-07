@@ -1,0 +1,108 @@
+:root {
+    --bg-color: #0d0d0d;
+    --panel-color: #1a1a1a;
+    --accent-color: #00f0f0;
+    --text-color: #ffffff;
+    --border-radius: 8px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: 150px minmax(300px, 400px) 150px;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--panel-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    max-width: 95vw;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#main-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border: 2px solid #333;
+    aspect-ratio: 10 / 20;
+    position: relative;
+    overflow: hidden;
+}
+
+#game-board {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.stat-box {
+    background-color: #222;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.stat-box h2 {
+    font-size: 0.9rem;
+    margin: 0 0 5px 0;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.stat-box p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--accent-color);
+}
+
+.mini-grid {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #111;
+    border-radius: 4px;
+}
+
+#controls-help {
+    margin-top: 20px;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+    #game-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .panel {
+        flex-direction: row;
+        justify-content: space-around;
+        order: 2;
+    }
+    
+    #main-panel {
+        order: 1;
+        max-height: 60vh;
+    }
+}

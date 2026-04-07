@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Tetris 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="side-left" class="panel">
+            <div class="stat-box">
+                <h2>HOLD</h2>
+                <div id="hold-piece" class="mini-grid"></div>
+            </div>
+        </div>
+        
+        <div id="main-panel">
+            <canvas id="game-board"></canvas>
+        </div>
+
+        <div id="side-right" class="panel">
+            <div class="stat-box">
+                <h2>SCORE</h2>
+                <p id="score">0</p>
+            </div>
+            <div class="stat-box">
+                <h2>LEVEL</h2>
+                <p id="level">1</p>
+            </div>
+            <div class="stat-box">
+                <h2>LINES</h2>
+                <p id="lines">0</p>
+            </div>
+            <div class="stat-box">
+                <h2>NEXT</h2>
+                <div id="next-piece" class="mini-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="controls-help">
+        <p>Arrows: Move/Drop | Z/X: Rotate | Space: Hard Drop | R: Restart</p>
+    </div>
+
+    <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
